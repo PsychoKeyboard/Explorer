@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 
 public class App 
 {
+    //cooler
     public static void main(String[] args) throws Exception 
     {
         //creates my window application where the game will play
