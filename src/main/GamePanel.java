@@ -28,12 +28,6 @@ public class GamePanel extends JPanel implements Runnable
     KeyHandler keyH = new KeyHandler();
     Player player = new Player(this , keyH);
 
-
-    //default player position
-    int playerX = 100;
-    int playerY = 100;
-    int playerSpeed = 4;        
-
     //FPS
     int FPS = 60;
     
