@@ -20,6 +20,7 @@ public class GamePanel extends JPanel implements Runnable
     final int scale = 3;            //need to scale up the 16x16 because too small on computer screen
 
     public final int tileSize = originalTileSize * scale; //48x48 tile size
+  
     final int maxScreenCol = 16;    // num of tiles in a col
     final int maxScreenRow = 12;    // num of tiles in row // R:C :: 3:4
     final int screenWidth = tileSize * maxScreenCol;    // 768 pixels
@@ -136,6 +137,32 @@ public class GamePanel extends JPanel implements Runnable
         //disposes of graphics coontext. Won't be able to use this graphic after this line
         g2.dispose();
 
+    }
+
+
+
+
+
+    //GETTERS
+
+    public int getTileSize() {
+        return tileSize;
+    }
+
+    public int getMaxScreenCol() {
+        return maxScreenCol;
+    }
+
+    public int getMaxScreenRow() {
+        return maxScreenRow;
+    }
+
+    public int getScreenWidth() {
+        return screenWidth;
+    }
+
+    public int getScreenHeight() {
+        return screenHeight;
     }
 
 }
