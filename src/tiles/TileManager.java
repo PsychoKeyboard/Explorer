@@ -26,7 +26,7 @@ public class TileManager {
         mapTileNum = new int[gp.getMaxScreenCol()][gp.getMaxScreenRow()];
 
         getTileImage();
-        loadMap();
+        loadMap("/res/maps/map01.txt");
     }
 
     public void getTileImage(){
@@ -52,12 +52,12 @@ public class TileManager {
     }
 
 
-    public void loadMap(){
+    public void loadMap(String filePath){
 
         try{
 
             //using input stream to import text file and buffered reader to read
-            InputStream is = getClass().getResourceAsStream("/res/maps/map01.txt");
+            InputStream is = getClass().getResourceAsStream(filePath);
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             int col = 0;
