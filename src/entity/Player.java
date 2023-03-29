@@ -1,6 +1,7 @@
 package entity;
 
 import main.KeyHandler;
+import main.App;
 import main.GamePanel;
 
 import java.awt.Graphics2D;

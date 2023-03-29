@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.text.PlainDocument;
 
 import entity.Player;
+import tiles.TileManager;
 
 public class GamePanel extends JPanel implements Runnable
 {
@@ -27,6 +28,9 @@ public class GamePanel extends JPanel implements Runnable
     Thread gameThread;      //starts the game clock 
     KeyHandler keyH = new KeyHandler();
     Player player = new Player(this , keyH);
+
+    //tile
+    TileManager tileM = new TileManager(this);
 
     //FPS
     int FPS = 60;
@@ -124,6 +128,9 @@ public class GamePanel extends JPanel implements Runnable
 
         Graphics2D g2 = (Graphics2D)g;      //casting my graphics g to graphics 2d
         
+
+        //drawing
+        tileM.draw(g2);
         player.draw(g2);
 
         //disposes of graphics coontext. Won't be able to use this graphic after this line
