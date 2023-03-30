@@ -26,6 +26,5 @@ public class App
 
         //start a new thread which starts clock
         gamePanel.startGameThread();        
-
     }
 }
